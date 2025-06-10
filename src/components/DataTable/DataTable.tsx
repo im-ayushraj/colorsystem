@@ -8,7 +8,6 @@ export function DataTable<T = any>({
   loading = false,
   page = 1,
   pageSize = 10,
-  totalCount = 0,
   onPageChange,
   sortKey,
   sortDirection,
@@ -20,7 +19,6 @@ export function DataTable<T = any>({
   onRowExpand,
   filters = {},
   onFilterChange,
-  responsiveBreakpoint = 640,
 }: DataTableProps<T>) {
   // Selection state (for uncontrolled mode)
   const [internalSelected, setInternalSelected] = useState<(string|number)[]>([]);
@@ -42,7 +40,7 @@ export function DataTable<T = any>({
   };
 
   // Handle row selection
-  const handleSelectRow = (rowIdx: number, rowId: string|number) => {
+  const handleSelectRow = (rowId: string|number) => {
     let newSelected;
     if (selected?.includes(rowId)) {
       newSelected = selected.filter(id => id !== rowId);
@@ -185,7 +183,7 @@ export function DataTable<T = any>({
                         <input
                           type={selectionMode === 'multiple' ? 'checkbox' : 'radio'}
                           checked={selected.includes(rowId)}
-                          onChange={() => handleSelectRow(rowIdx, rowId)}
+                          onChange={() => handleSelectRow(rowId)}
                           aria-label={`Select row ${rowIdx + 1}`}
                         />
                       </td>
