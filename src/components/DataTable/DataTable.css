@@ -1,0 +1,57 @@
+.datatable-responsive {
+  /* On small screens, make table scrollable and stack cells */
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 640px) {
+  .datatable-responsive table,
+  .datatable-responsive thead,
+  .datatable-responsive tbody,
+  .datatable-responsive th,
+  .datatable-responsive td,
+  .datatable-responsive tr {
+    display: block;
+    width: 100%;
+  }
+  .datatable-responsive thead tr {
+    display: none;
+  }
+  .datatable-responsive td {
+    position: relative;
+    padding-left: 50%;
+    min-height: 40px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .datatable-responsive td:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    padding-left: 8px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: var(--color-neutral-500);
+    content: attr(data-label);
+  }
+  .datatable-responsive td:before {
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+.table-focusable:focus {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  z-index: 1;
+}
+
+.table-checkbox:focus {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.table-row:hover {
+  background: var(--color-neutral-100);
+  transition: background 0.2s;
+}

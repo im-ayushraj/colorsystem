@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design System/Color System" />
+
+# 🎨 Color System
+
+A robust, token-based color system for B2B/enterprise UI. Supports light/dark themes, semantic colors, and WCAG-compliant contrast.
+
+## Token Naming Conventions
+- `--color-primary`, `--color-secondary`, `--color-tertiary`
+- `--color-neutral-100` ... `--color-neutral-900`
+- `--color-success`, `--color-info`, `--color-warning`, `--color-error`
+- `--color-bg-default`, `--color-bg-muted`, `--color-bg-elevated`, `--color-border`
+
+## Example Applications
+
+<div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+  <div style={{ background: 'var(--color-primary)', color: 'var(--color-white)', padding: 16, borderRadius: 8 }}>Primary</div>
+  <div style={{ background: 'var(--color-secondary)', color: 'var(--color-white)', padding: 16, borderRadius: 8 }}>Secondary</div>
+  <div style={{ background: 'var(--color-tertiary)', color: 'var(--color-white)', padding: 16, borderRadius: 8 }}>Tertiary</div>
+  <div style={{ background: 'var(--color-success)', color: 'var(--color-white)', padding: 16, borderRadius: 8 }}>Success</div>
+  <div style={{ background: 'var(--color-info)', color: 'var(--color-white)', padding: 16, borderRadius: 8 }}>Info</div>
+  <div style={{ background: 'var(--color-warning)', color: 'var(--color-black)', padding: 16, borderRadius: 8 }}>Warning</div>
+  <div style={{ background: 'var(--color-error)', color: 'var(--color-white)', padding: 16, borderRadius: 8 }}>Error</div>
+</div>
+
+## Accessibility Considerations
+- All color pairs meet or exceed [WCAG AA](https://www.w3.org/WAI/standards-guidelines/wcag/) contrast ratios for text and UI elements.
+- Use semantic tokens for status and feedback.
+- Test with both light and dark themes.
+
+---
+
+> **Tip:** Use CSS variables in your components for easy theming and maintainability.

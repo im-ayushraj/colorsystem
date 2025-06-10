@@ -1,0 +1,84 @@
+/* src/theme/colors.css
+   Token-based color system for light and dark themes */
+
+:root {
+  /* Primary Palette */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-active: #1e40af;
+
+  /* Secondary Palette */
+  --color-secondary: #7c3aed;
+  --color-secondary-hover: #6d28d9;
+  --color-secondary-active: #5b21b6;
+
+  /* Tertiary Palette */
+  --color-tertiary: #10b981;
+  --color-tertiary-hover: #059669;
+  --color-tertiary-active: #047857;
+
+  /* Neutral Palette */
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Semantic Colors */
+  --color-success: #22c55e;
+  --color-info: #0ea5e9;
+  --color-warning: #eab308;
+  --color-error: #ef4444;
+
+  /* Surface/Background */
+  --color-bg-default: #fff;
+  --color-bg-muted: #f3f4f6;
+  --color-bg-elevated: #f9fafb;
+  --color-border: #e5e7eb;
+
+  --focus-ring: 0 0 0 3px var(--color-primary);
+}
+
+[data-theme="dark"] {
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+  --color-primary-active: #1d4ed8;
+
+  --color-secondary: #a78bfa;
+  --color-secondary-hover: #8b5cf6;
+  --color-secondary-active: #7c3aed;
+
+  --color-tertiary: #34d399;
+  --color-tertiary-hover: #10b981;
+  --color-tertiary-active: #059669;
+
+  --color-neutral-100: #1f2937;
+  --color-neutral-200: #374151;
+  --color-neutral-300: #4b5563;
+  --color-neutral-400: #6b7280;
+  --color-neutral-500: #9ca3af;
+  --color-neutral-600: #d1d5db;
+  --color-neutral-700: #e5e7eb;
+  --color-neutral-800: #f3f4f6;
+  --color-neutral-900: #fff;
+  --color-white: #111827;
+  --color-black: #fff;
+
+  --color-success: #4ade80;
+  --color-info: #38bdf8;
+  --color-warning: #fde047;
+  --color-error: #f87171;
+
+  --color-bg-default: #18181b;
+  --color-bg-muted: #27272a;
+  --color-bg-elevated: #23272f;
+  --color-border: #27272a;
+
+  --focus-ring: 0 0 0 3px var(--color-primary);
+}
